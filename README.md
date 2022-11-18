@@ -25,12 +25,17 @@ For the last Research question, we used an additional dataset ("Radicalization D
  
  To answer this question we need:
  
- **(a) Measuring sentiment:** We chose to use a pretrained model to do the sentiment analysis. The Base model is BERTweet, a RoBERTa model trained on English tweets and then fine-tuned on SemEval 2017 corpus (around ~40k tweets). BERTweet is a large-scale pre-trained language model for English Tweets. It uses transformer methods to represent each word as a vector which can then be fed to a classifier to do classification.
+ **(a) Measuring sentiment:** [We use a pretrained model to do sentiment analysis](https://github.com/pysentimiento/pysentimiento). The Base model is BERTweet, a RoBERTa model trained on English tweets and then fine-tuned on SemEval 2017 corpus (around ~40k tweets). BERTweet is a large-scale pre-trained language model for English Tweets. It uses transformer methods to represent each word as a vector which can then be fed to a classifier to do classification.
 
  
- **(b) Measuring heat/polarization per video:** In the process of measuring the evolution of political polarization, we first chose to focus on people’s reaction to videos in the political channels especially in the category "People & Blogs". We chose a metric to analyze the trend of people’s disagreement or conflict of opinions towards a certain video which is the ratio between number of dislikes and total number of likes and dislikes. In this part, we visualized the trend of this ratio over months. Each month will have a mean value for this “heat metric” that represents how negative the response was to videos posted in this specific month on average. 
+ **(b) Measuring heat/polarization per video:** In the process of measuring the evolution of political polarization, we used an approach to focus on people’s reaction to videos in the political channels especially in the (People & Blogs) category of videos. We selected a metric to analyze the trend of people’s disagreement or conflict of opinions towards a certain video which is the ratio between number of dislikes and total number of likes and dislikes. In this part, we visualized the trend of this ratio over months. Each month will have a mean value for this “heat metric” that represents how negative the response was to videos posted in this specific month on average. 
 
-As a hypothesis, we expected an increasing trend for the ratio reflecting more negativity and disagreement with the political scene. However, the plot created was showing the complete opposite with a decreasing trend of the heat metric. Our explanation to this phenomenon is that people actually are becoming more radicalized to the extent that they only watch videos that agree with their political affiliations and their disinterest in opposite opinions is increasing. 
+As a hypothesis, we expected an increasing trend for the ratio reflecting more negativity and disagreement with the political scene. Surprisingly, the dislikes over the total number of likes and dislikes dropped overtime. We have some theories about what this happens: 
+1. People are accepting opposing opinions 
+2. People are becoming so politically radicalized that they only interact/view videos that agree with their own political views
+
+We tend to believe the second theory but we will explore more in the third milestone. This goes with the fact that the average interactions per video show growth overtime. Which means that people are having stronger opinions about the content either positive or negative which can be a sign of radicalization
+
 
 
  **RQ2:** 
