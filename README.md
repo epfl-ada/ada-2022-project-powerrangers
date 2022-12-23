@@ -45,7 +45,15 @@ Then we ran the sentiment model over the videos' descriptions which were address
 
  **RQ3:** 
  
-In order to explore whether youtube contributed to the election victory of the Republicans 2017 (where Trump was elected), our idea is to analyze the statistics of "right" videos compared to the statistics of "left" and "center" videos in the (pre-)election period of 2017. That is, we study and compare the growth of the amount of published videos for the three categorical videos ("left", "right" and "center") starting in the pre-election period of 2017. On top of that, we also want to analyze the evolution of the heat-metric (as described before) during that period to assess the user engagement for the three different political categories. To do that, we also used the “Radicalization Dataset” described in the previous section.
+In order to understand the difference in user-behavior based on the political orientation even better, we used the "Radicalization Dataset" described above on top of the YouNiverse dataset as we had access to 676 channels classified based on their political orientation (i.e. left, center, right). Using these classifications, we had 228,730 classified videos based on their political orientation. Using this video data, we analyzed the growth of each of the video categories over time and also compared the development of the heat-metric over time. 
+
+To find the differences in topics covered by left and right wing videos. we created a wordcloud for the left and right videos based on the nouns they use most frequently in their video titles.
+
+Focusin on the most frequently used keywords, we ran a sentiment analysis on videos mentioning these words in their titles for the right and left political groups. The sentiment disceprancies on the chosen topics between the two political groups were visulized using boxplots. Finally, an OLS regression model was used to test the statistical significance on the 
+
+
+
+
 
 ### Proposed Timeline (incl. organization within the team)
 
