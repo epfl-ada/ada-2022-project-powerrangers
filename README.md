@@ -49,22 +49,15 @@ In order to understand the difference in user-behavior based on the political or
 
 To find the differences in topics covered by left and right wing videos. we created a wordcloud for the left and right videos based on the nouns they use most frequently in their video titles.
 
-Focusin on the most frequently used keywords, we ran a sentiment analysis on videos mentioning these words in their titles for the right and left political groups. The sentiment disceprancies on the chosen topics between the two political groups were visulized using boxplots. Finally, an OLS regression model was used to test the statistical significance on the 
+Focusing on the most frequently used keywords: Obama, Trump, Hillary, Russia, China, Immigration, Climate change, Putin, Police, and Women, we ran a sentiment analysis on videos mentioning these words in their titles for the right and left political groups. The sentiment disceprancies on the chosen topics between the two political groups were visulized using boxplots. 
+
+Finally, an OLS regression model was used to test the relationship between the orienatation of a video and the sentiment score of its title. The regression analysis was used over the right and left wings' videos for every keyword separately. For example, taking the keyword "climate change", the videos included in the analysis were only those which had the keyword in the title. 
 
 
 
-
-
-### Proposed Timeline (incl. organization within the team)
+### Team members contribution
 
 - 3/12 - 5/12 Running sentiment analysis on the whole dataset / different political groups separately (Mohamed and Ahmed)
 - 06/12 - 11/12 Running tests presented in the proposal to answer the research questions (Esraa and Joshua)
 - 12/12 - 18/12 Tabulating the final results and preparing the data story (the whole team)
 - 23/12  Final submission 
-
-
-
-
-### Questions for TAs
-- What does “PUA” stand for as a political category? And can we classify it as left, center or right? We could not figure it out...
-- Regarding the heat metric mentioned in the proposal, we had another idea to use the ratio between the number of comments and the views to identify videos which had heated discussions in the comments section. Given that, can you suggest an effcient way to deal with the comments dataset given its size ?
