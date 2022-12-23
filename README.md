@@ -2,16 +2,16 @@ Youtube as a political weapon
 =======================
 
 ### Abstract:
-Youtube is a main platform for sharing political videos and thus has a big impact on the political views of people. This leads to the effect that it could be used to particularly influence the political views of the users, i.e. it could be used as a political weapon. In our analysis, we assess if the data reflects this hypothesis and further explore if and how youtube has influenced the election result of the 2017 election in the USA. More precisely, we first analyze how the negative sentiment and political polarization has evolved over time. Then, we try to answer the question whether Youtube has indeed been used as a political weapon in the past. In the last part, we particularly analyze the (pre-)election period of 2017 to assess if and how Youtube had an impact on the election results.
+YouTube is one of the major social media platforms of our generation and people everywhere use it to keep in touch with the world. But how is YouTube used in the light of politics? Do users use YouTube just to catch up with recent news while having breakfast or is it more than that? Our approach is to first analyze the general political interaction on Youtube and compare it to the watching-behaviour of different video categories. Showing that there are indeed differences in the interaction behvaiour in political vs non-political videos, we narrow our research down to understand the differences within the category of political videos. More precisely, we analyze the differences in watching behaviour regarding views about politicians (Trump, Clinton and Obama) and also political orientation (left, center and right). Using the results, we examine how these are in line with the election results in the US. In our last part, we analyze the differences in political topics used by the three groups and test whether the respective sentiment disceprancies are statistically significant between the political orientations.
 
 
 ### Research Questions:
 
- **RQ1:** Did the negative sentiment and political polarization in political videos increase over time?
+ **RQ1:** How is the general political interaction on Youtube compared to the watching-behaviour of other video categories? 
 
- **RQ2:** Has Youtube been used as a political weapon and if so, who initiated this tone and benefited from it?
+ **RQ2:** How were Trump, Obama, and Hilary Clinton covered on YouTube in terms of amount of coverage, sentiment and viewers' interactions?
 
- **RQ3:** Has Youtube contributed to the election victory of Trump in 2017 and if so, how?
+ **RQ3:** How did the right and left political wings use Youtube and how were their videos perceived by the viewers? In addition, what were their most covered topics and in what context from the sentiment point of view?  
  
  
 
@@ -28,30 +28,20 @@ For the last Research question, we used an additional dataset ("Radicalization D
  **(a) Measuring sentiment:** [We use a pretrained model to do sentiment analysis](https://github.com/pysentimiento/pysentimiento). The Base model is BERTweet, a RoBERTa model trained on English tweets and then fine-tuned on SemEval 2017 corpus (around ~40k tweets). BERTweet is a large-scale pre-trained language model for English Tweets. It uses transformer methods to represent each word as a vector which can then be fed to a classifier to do classification.
 
  
- **(b) Measuring heat/polarization per video:** In the process of measuring the evolution of political polarization, we used an approach to focus on people’s reaction to videos in the political channels especially in the (People & Blogs) category of videos. We selected a metric to analyze the trend of people’s disagreement or conflict of opinions towards a certain video which is the ratio between number of dislikes and total number of likes and dislikes. In this part, we visualized the trend of this ratio over months. Each month will have a mean value for this “heat metric” that represents how negative the response was to videos posted in this specific month on average. 
-
-As a hypothesis, we expected an increasing trend for the ratio reflecting more negativity and disagreement with the political scene. Surprisingly, the dislikes over the total number of likes and dislikes dropped overtime. We have some theories about what this happens: 
-1. People are accepting opposing opinions 
-2. People are becoming so politically radicalized that they only interact/view videos that agree with their own political views
-
-We tend to believe the second theory but we will explore more in the third milestone. This goes with the fact that the average interactions per video show growth overtime. Which means that people are having stronger opinions about the content either positive or negative which can be a sign of radicalization
-
-
+ **(b) Measuring heat per video:** In the process of measuring the evolution of heat, we used an approach to focus on people’s reaction to videos in the political channels especially in the (People & Blogs) category of videos. We selected a metric to analyze the trend of people’s disagreement or conflict of opinions towards a certain video which is the ratio between number of dislikes and total number of likes and dislikes. In this part, we visualized the trend of this ratio over months. Each month will have a mean value for this “heat metric” that represents how negative the response was to videos posted in this specific month on average. 
+ 
+The next step was comparing the sentiment scores and the heat metric of videos across different categories. 
 
  **RQ2:** 
  
-To answer this question, we will focus on the presidents/presidential candidates to show who benefited the most from youtube as a tool to improve his/her presence in the political scene. We chose the following political figures as examples to test our hypothesis: 
-- Donald Trump
-- Barack Obama
-- Hillary Clinton
+To answer this question, we extracted all videos which contain "Trump", "Obama" or "Clinton" in their video description. Thus, we ended up with:
+- 349,091 Trump videos,
+- 120,319 Obama videos,
+- 46,336 Clinton videos.
 
-The comparison was based on three different aspects:
-- Coverage and Publicity (which will be measured by the ratio between number of views and number of videos).
-- Polarization (which will be measured by the heat metric presented in RQ1)
-- Sentiment (which will be measured with the sentiment analysis model presented in RQ1).
+To have a more meaningful metric for publicity and coverage over time, we examined the amount of quarterly released videos over time, the monthly views of each of these categories over time and the resulting average views per video over time.
 
-As a feasibility analysis, it was chosen to do the comparison for coverage and publicity. For the implementation, new data frames were generated and saved on the disk with videos linked to each of the three figures by identifying their names in the videos’ descriptio
-
+Then we ran the sentiment model over the videos' descriptions which were addressing the three figures. In additon, we used the heat metric previously explained to examine the nature of viewers' interactions with videos over time and specifically around the elections period. 
 
  **RQ3:** 
  
