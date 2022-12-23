@@ -1,4 +1,4 @@
-Youtube as a political weapon
+Politics on YouTube
 =======================
 
 ### Abstract:
@@ -57,7 +57,7 @@ Finally, an OLS regression model was used to test the relationship between the o
 
 ### Team members contribution
 
-- 3/12 - 5/12 Running sentiment analysis on the whole dataset / different political groups separately (Mohamed and Ahmed)
-- 06/12 - 11/12 Running tests presented in the proposal to answer the research questions (Esraa and Joshua)
-- 12/12 - 18/12 Tabulating the final results and preparing the data story (the whole team)
-- 23/12  Final submission 
+- Ahmed: Preprocessing data (data reduction), Sentiment and heat metric analysis on the whole dataset / political figures, Data story.
+- Joshua: Sentiment and heat metric analysis on the political groups, Wordclouds, Data story.
+- Esraa: Preprocessing data (data exploration), dynamic plots, Data story.
+- Mohamed: Sentiment analysis and regression model on keywords, Data story.
